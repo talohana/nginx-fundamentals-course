@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  ubuntu:
+    container_name: ubuntu
+    build: .
+    ports:
+      - 80:80
+    tty: true
+    privileged: true
+    volumes:
+      - ./sites:/sites
+      - ./nginx.conf:/etc/nginx/nginx.conf
